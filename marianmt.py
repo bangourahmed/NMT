@@ -9,7 +9,7 @@ def translate_french_to_english_with_marianmt(text):
     # Use  the NMT model to get the neural machine translation
     nmt_translation, confidence_scores = nmt_model.translate(text, return_scores=True)
 
-    return nmt-nmt_translation, confidence_scores
+    return nmt_translation, confidence_scores
 
 def detect_language(text):
     try:
@@ -24,7 +24,7 @@ def main():
     while True:
         input_text = input("Enter the French text you want to translate: ")
 
-        if input_tex.lower() == "exit":
+        if input_text.lower() == "exit":
             break
 
         # Detect the input language
